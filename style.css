@@ -375,6 +375,23 @@ button:hover {
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
+.card h4 {
+  margin: 15px 0 10px 0;
+}
+.card p {
+  padding: 0 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.certification-card {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding-bottom: 20px;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  margin-top: 30px;
+}
 
 /* ===== Go Up Button ===== */
 #goUpBtn {
