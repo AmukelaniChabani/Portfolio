@@ -10,7 +10,7 @@
 
 :root {
   --bg-color: #0f2027;
-  --bg-gradient: linear-gradient(90deg, rgba(28, 47, 48, 1) 0%, rgba(2, 8, 5, 1) 50%, rgba(28, 47, 48, 1) 100%);
+  --bg-gradient: black;
   --text-color: #fff;
   --accent: #007BFF;
   --color-blur: #f8f8ff17;
@@ -27,6 +27,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  
 }
 
 .logo {
@@ -39,7 +40,7 @@
   list-style: none;
   gap: 20px;
   -webkit-animation: tracking-in-expand 0.20s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
- animation: tracking-in-expand 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: tracking-in-expand 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 /* 
   * Tracking In Expand Animation
@@ -94,6 +95,8 @@
   color: var(--text-color);
 }
 
+
+
 /* ===== Home ===== */
 .wave-text span {
   display: inline-block;
@@ -114,8 +117,7 @@
 .profile img {
   width: 180px;
   height: 180px;
-  border-radius: 30%;
- 
+  border-radius: 30%; 
   object-fit: cover;
   margin: 20px 0;
 }
@@ -127,7 +129,10 @@ h1{
   background: linear-gradient(90deg, #ff8a00, #e52e71, #9b00ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+
 }
+
 
 button {
   background: var(--accent);
@@ -248,7 +253,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px 50px;  
+    padding: 20px 10px;  
 }
 .box3 img{
     display: flex;
@@ -359,6 +364,9 @@ button:hover {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
@@ -372,21 +380,11 @@ button:hover {
 }
 
 .card img {
-  width: 100%;
+  width: 20%;
   border-radius: 15px 15px 0 0;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-}
-.card h4 {
-  margin: 15px 0 10px 0;
-}
-.card p {
-  padding: 0 15px;
-  font-size: 0.9rem;
-  color: #ccc;
-}
+
+
 .certification-card {
   width: 300px;
   background-color: rgba(255, 255, 255, 0.05);
@@ -428,6 +426,9 @@ a {
     padding: 10px;
     display: none;
   }
+  .amu {
+    display: none;
+  }
 
   .navbar ul.active {
     display: flex;
@@ -439,8 +440,83 @@ a {
 
   .about-content {
     flex-direction: column;
-    text-align: center;
+    
   }
+}
+
+/* ===== Scroll Animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-left {
+  transform: translateX(-60px);
+}
+
+.fade-right {
+  transform: translateX(60px);
+}
+
+.zoom-in {
+  transform: scale(0.85);
+}
+
+.reveal.active.fade-left,
+.reveal.active.fade-right {
+  transform: translateX(0);
+}
+
+.reveal.active.zoom-in {
+  transform: scale(1);
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 20px;
+}
+.amu{
+  
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 50px;  
+}
+
+
+.amu img {
+  width: 500px;
+  height: 320px;
+  border-radius: 10%;
+  object-fit: cover;
+  -webkit-animation: heartbeat 6.5s ease-in-out infinite alternate both;
+          animation: heartbeat 6.5s ease-in-out infinite alternate both;
+}
+
+.amu img:hover {
+  -webkit-animation: heartbeat 6.5s ease-in-out infinite alternate both;
+          animation: heartbeat 6.5s ease-in-out infinite alternate both;
+          cursor: pointer;
+}
+
+.card1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding-bottom: 20px;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 
