@@ -45,3 +45,7 @@ const observer = new IntersectionObserver(
 );
 
 reveals.forEach(el => observer.observe(el));
+
+const toggleButton = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
+
