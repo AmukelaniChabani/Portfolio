@@ -49,16 +49,5 @@ reveals.forEach(el => observer.observe(el));
 const toggleButton = document.getElementById('theme-toggle');
 const currentTheme = localStorage.getItem('theme');
 
-//loader
 
-window.addEventListener("load", function() {
-
-const timerId = setTimeout(() => {
-  console.log("This runs after 4 seconds");
-  const loader = document.querySelector(".loader-wrapper");
-    loader.style.display = "none";
-}, 4000);
-
-    
-});
 
