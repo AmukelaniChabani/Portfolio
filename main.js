@@ -52,7 +52,13 @@ const currentTheme = localStorage.getItem('theme');
 //loader
 
 window.addEventListener("load", function() {
-    const loader = document.querySelector(".loader-wrapper");
+
+const timerId = setTimeout(() => {
+  console.log("This runs after 4 seconds");
+  const loader = document.querySelector(".loader-wrapper");
     loader.style.display = "none";
+}, 4000);
+
+    
 });
 
