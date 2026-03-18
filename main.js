@@ -49,3 +49,8 @@ reveals.forEach(el => observer.observe(el));
 const toggleButton = document.getElementById('theme-toggle');
 const currentTheme = localStorage.getItem('theme');
 
+//loader
+window.addEventListener("load", function() {
+    const loader = document.querySelector(".loader-wrapper");
+    loader.style.display = "none";
+});

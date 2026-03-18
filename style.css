@@ -34,7 +34,7 @@
 
 /* The spinner itself */
 .loader {
-  border: 8px solid #f3f3f3;
+  border: 8px solid #fd0101;
   border-top: 8px solid #3498db;
   border-radius: 50%;
   width: 60px;
