@@ -794,7 +794,7 @@ button:hover {
 
 .amu img {
   width: 500px;
-  height: 320px;
+  height: auto;
   border-radius: 10%;
   object-fit: cover;
   -webkit-animation: heartbeat 6.5s ease-in-out infinite alternate both;
